@@ -6,6 +6,128 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+
+  &.darkmode {
+    img {
+      filter: brightness(0.9);
+    }
+
+    #main {
+      background-color: #333;
+
+      .text {
+        p {
+          color: #888;
+        }
+      }
+
+      .slider_div {
+        > a {
+          background-color: #333;
+          color: #ccc;
+        }
+      }
+    }
+
+    #sub_1,
+    #sub_2 {
+      background-color: #234f6a;
+
+      .sub_txt {
+        background-color: #333;
+
+        h2 {
+          color: #ccc;
+        }
+
+        p {
+          color: #999;
+        }
+      }
+    }
+
+    #article {
+      background-color: #333;
+
+      .inner {
+        h2 {
+          color: #ccc;
+        }
+        .arti_text {
+          background-color: #333;
+          p {
+            color: #999;
+          }
+        }
+      }
+    }
+
+    #banner {
+      .inner {
+        background-color: rgba(0, 0, 0, 0.6);
+
+        h2 {
+          color: #ccc;
+        }
+
+        p {
+          color: #999;
+        }
+      }
+    }
+
+    #footer {
+      background-color: #333;
+
+      .inner {
+        p {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+
+.modeBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $deep_blue;
+  transition: 0.35s;
+  cursor: pointer;
+  z-index: 5;
+
+  &:hover {
+    background-color: #fff;
+
+    a {
+      color: $deep_blue;
+    }
+  }
+
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    transition: 0.35s;
+    opacity: 0;
+
+    &.on {
+      opacity: 1;
+    }
+  }
+}
+
+section,
+footer,
+aside {
+  transition: 0.5s;
 }
 
 #main {
@@ -213,6 +335,7 @@ body {
       text-align: center;
       font-size: 30px;
       margin-bottom: 100px;
+      font-family: "Noto serif", serif;
     }
 
     article {
@@ -293,6 +416,7 @@ body {
 
     h2 {
       font-size: 55px;
+      font-family: "Noto serif", serif;
       margin-bottom: 100px;
       opacity: 0;
       transition: all 1s;

@@ -13,6 +13,77 @@ a {
 
 body {
   font-family: "Noto Sans", sans-serif; }
+  body.darkmode img {
+    filter: brightness(0.9); }
+  body.darkmode #main {
+    background-color: #333; }
+    body.darkmode #main .text p {
+      color: #888; }
+    body.darkmode #main .slider_div > a {
+      background-color: #333;
+      color: #ccc; }
+  body.darkmode #sub_1,
+  body.darkmode #sub_2 {
+    background-color: #234f6a; }
+    body.darkmode #sub_1 .sub_txt,
+    body.darkmode #sub_2 .sub_txt {
+      background-color: #333; }
+      body.darkmode #sub_1 .sub_txt h2,
+      body.darkmode #sub_2 .sub_txt h2 {
+        color: #ccc; }
+      body.darkmode #sub_1 .sub_txt p,
+      body.darkmode #sub_2 .sub_txt p {
+        color: #999; }
+  body.darkmode #article {
+    background-color: #333; }
+    body.darkmode #article .inner h2 {
+      color: #ccc; }
+    body.darkmode #article .inner .arti_text {
+      background-color: #333; }
+      body.darkmode #article .inner .arti_text p {
+        color: #999; }
+  body.darkmode #banner .inner {
+    background-color: rgba(0, 0, 0, 0.6); }
+    body.darkmode #banner .inner h2 {
+      color: #ccc; }
+    body.darkmode #banner .inner p {
+      color: #999; }
+  body.darkmode #footer {
+    background-color: #333; }
+    body.darkmode #footer .inner p {
+      color: #777; }
+
+.modeBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #00789b;
+  transition: 0.35s;
+  cursor: pointer;
+  z-index: 5; }
+  .modeBtn:hover {
+    background-color: #fff; }
+    .modeBtn:hover a {
+      color: #00789b; }
+  .modeBtn a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    transition: 0.35s;
+    opacity: 0; }
+    .modeBtn a.on {
+      opacity: 1; }
+
+section,
+footer,
+aside {
+  transition: 0.5s; }
 
 #main {
   width: 100%;
@@ -173,7 +244,8 @@ body {
     #article .inner h2 {
       text-align: center;
       font-size: 30px;
-      margin-bottom: 100px; }
+      margin-bottom: 100px;
+      font-family: "Noto serif", serif; }
     #article .inner article {
       position: relative;
       width: 300px;
@@ -233,6 +305,7 @@ body {
     color: #fff; }
     #banner .inner h2 {
       font-size: 55px;
+      font-family: "Noto serif", serif;
       margin-bottom: 100px;
       opacity: 0;
       transition: all 1s; }
