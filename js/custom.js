@@ -6,6 +6,8 @@ const $next = $(".next");
 const $btns = $("#nav li");
 const $boxs = $(".myScroll");
 const leng = $btns.length;
+
+const $mode = $(".modeBtn");
 let posArr = [];
 let baseLine = -500;
 let speed = 1000;
@@ -41,6 +43,11 @@ $prev.on("click", function (e) {
   prev($slider);
 });
 
+$mode.on("click", function (e) {
+  e.preventDefault();
+  mode();
+});
+
 //function --------------------------------------
 function setPos() {
   posArr = []; //초기화
@@ -55,7 +62,7 @@ function activeBtn(scroll) {
       $btns.children("a").removeClass("on");
       $btns.eq(i).children("a").addClass("on");
 
-      $boxs.eq(i).addClass("on"); 
+      $boxs.eq(i).addClass("on");
     }
     if (scroll == 0) {
       $boxs.removeClass("on");
@@ -91,4 +98,18 @@ function prev(el) {
     $(this).css({ marginLeft: "-100%" });
     $(this).children("li").last().prependTo(this);
   });
+}
+
+function mode() {
+  let isDark = $("body").hasClass("darkmode");
+
+  if (!isDark) {
+    $(".dark").removeClass("on");
+    $(".light").addClass("on");
+    $("body").addClass("darkmode");
+  } else {
+    $(".light").removeClass("on");
+    $(".dark").addClass("on");
+    $("body").removeClass("darkmode");
+  }
 }
