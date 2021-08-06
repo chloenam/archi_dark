@@ -81,8 +81,7 @@ body {
       opacity: 1; }
 
 section,
-footer,
-aside {
+footer {
   transition: 0.5s; }
 
 #main {
